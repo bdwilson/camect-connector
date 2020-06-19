@@ -15,7 +15,7 @@ interact with
 2. You'll then need to determine your username and password - the username in the default case is **admin** and the password is the first part of your email address that you used to register your camect device - for instance, bob@gmail.com would give you the password "bob".
 3. Install [Camect Hubitat](https://github.com/bdwilson/hubitat/tree/master/Camect) code, fill in your above information and **enable OAUTH**. You'll need to copy your OAUTH URL and use it in step 4.
 4. Replace these variables within camect_connector.py
-5. Change directory in the .service file to match where your raincloudy_flask.py file is.
+5. Change directory in the .service file to match where your camect-connect.py file is.
 6. Copy service file to /lib/systemd/system/ then enable it.
 <pre>
 # systemctl daemon-reload
