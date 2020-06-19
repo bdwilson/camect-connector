@@ -1,0 +1,15 @@
+[Unit]
+Description=Camect Connector
+Requires=network.target
+
+[Service]
+Type=simple
+Restart=on-failure
+User=nobody
+Group=dialout
+#WorkingDirectory=/home/pi/camect-connector
+ExecStart=/usr/bin/python3 /home/pi/camect-connector/camect_connector.py
+
+[Install]
+WantedBy=multi-user.target
+
