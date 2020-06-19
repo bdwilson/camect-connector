@@ -30,12 +30,8 @@ via wget and put it in a directory on your Docker server. Then run the commands
 below from that directory subbing in the variables from above.
 2. <code> # docker build -t camect-connector --build-arg USERNAME='admin'
 --build-arg PASSWORD='your_password' --build-arg CAMECTCODE='a1b2xxxx'
---build-arg
-HUBITATOAUTH='http://192.168.x.x/apps/api/258/camect/?access_token=abc24323-13526236-23626-xxxxxxx'
-. </code> **Don't forget your dot at the end**
-CTRL-C out of it when it's complete.
-3. Run your newly created image: <code> # docker run --name camect-connector -t
-camect-connector</code> 
+--build-arg HUBITATOAUTH='http://192.168.x.x/apps/api/258/camect/?access_token=abc24323-13526236-23626-xxxxxxx' . </code> **Don't forget your dot at the end**
+3. Run your newly created image: <code> # docker run -d --restart unless-stopped --name camect-connector -t camect-connector</code> 
 4. That's it. If you need to troubleshoot your docker image, you can get into
 it via:
 <code># docker exec -it camect-connector /bin/bash</code> or 
