@@ -18,7 +18,6 @@ RUN apt-get update -y && \
     sed -i -- "s#HUBITATOAUTH#${HUBITATOAUTH}#" /code/camect-connector/camect_connector.py && \
     sed -i "s/CAMECTCODE/${CAMECTCODE}/" /code/camect-connector/camect_connector.py
 
-#ADD . /code/
 WORKDIR /code/camect-py
 RUN /usr/bin/python3 setup.py install
 CMD [ "python3", "/code/camect-connector/camect_connector.py" ]
