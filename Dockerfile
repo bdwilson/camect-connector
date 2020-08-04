@@ -11,7 +11,7 @@ WORKDIR /code
 RUN apt-get update -y && \
     apt-get install -y python3 python3-pip git && \
     pip3 install requests && \
-    git clone https://github.com/bdwilson/camect-py && \
+    git clone https://github.com/camect/camect-py && \
     git clone https://github.com/bdwilson/camect-connector && \
     sed -i "s/USERNAME/${USERNAME}/" /code/camect-connector/camect_connector.py && \
     sed -i "s/PASSWORD/${PASSWORD}/" /code/camect-connector/camect_connector.py && \
